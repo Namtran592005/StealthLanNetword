@@ -78,10 +78,6 @@ Bộ công cụ này rất hữu ích trong các môi trường mạng công c�
 ## Lưu ý quan trọng
 - **Sử dụng VPN để tăng cường bảo mật**: Kết hợp với VPN (như Cloudflare WARP 1.1.1.1) để mã hóa lưu lượng mạng, đặc biệt trong mạng công cộng.
 - **Ảnh hưởng đến chức năng mạng**: `stealth.bat` tắt các dịch vụ như chia sẻ tệp/in ấn và RDP. Chỉ sử dụng trong các mạng không đáng tin cậy và chạy `restore.bat` khi trở về mạng an toàn.
-- **TTL = 1 có thể gây vấn đề**: Giá trị TTL = 1 trong `stealth.bat` có thể làm gián đoạn kết nối internet với một số dịch vụ. Để cải thiện, chỉnh sửa `stealth.bat` để đặt `defaultcurhoplimit=64` thay vì 1:
-  ```
-  netsh int ipv4 set global defaultcurhoplimit=64
-  ```
 - **Kiểm tra hiệu quả**: Sử dụng công cụ như `nmap` từ một máy khác trong mạng để kiểm tra xem máy của bạn có thực sự "tàng hình" không:
   ```
   nmap -sn <your_ip>
